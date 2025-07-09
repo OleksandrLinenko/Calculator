@@ -4,7 +4,7 @@
  */
 package calculator;
 
-import UI.UI;
+import UI.MainMenu;
 import java.io.IOException;
 
 /**
@@ -17,6 +17,6 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        UI.create().show();
+        MainMenu.create().show();
     }
 }

@@ -4,7 +4,7 @@
  */
 package calculator;
 
-import java.util.Scanner;
+import UI.Ask;
 import UI.Message;
 
 /**
@@ -12,15 +12,12 @@ import UI.Message;
  * @author oleksandrlinenko
  */
 public class GetComponentCommand {
-    
-    private static Scanner sc = new Scanner(System.in);
-    
+
     public static GetComponentCommand create() {
         return new GetComponentCommand();
     }
     
     public Component handle() {
-        Message.create().show("Set component value: ");
-        return new Component(sc.nextInt());
+        return new Component(Ask.create().getValue("Set value: "));
     }
 }

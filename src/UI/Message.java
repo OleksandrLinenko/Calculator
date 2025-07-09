@@ -14,6 +14,6 @@ public class Message {
     }
     
     public void show(String string) {
-        System.out.println(string);
+        System.out.print(string);
     }
 }
