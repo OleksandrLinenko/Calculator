@@ -18,8 +18,9 @@ public class Ask {
         return new Ask();
     }
     
-    public int getValue(String string) {
+    public float getValue(String string) {
         Message.create().show(string);
-        return sc.nextInt();
+        String number = sc.nextLine();
+        return Float.parseFloat(number.trim());
     }
 }

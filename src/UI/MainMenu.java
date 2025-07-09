@@ -5,6 +5,9 @@
 package UI;
 
 
+import calculator.DivideCommand;
+import calculator.MinusCommand;
+import calculator.MultCommand;
 import calculator.SumCommand;
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -32,7 +35,11 @@ public class MainMenu {
     }
 
     private void menu() {
+        System.out.println("Calculator");
         System.out.println("1. Get sum of two elements");
+        System.out.println("2. Get difference of two elements");
+        System.out.println("3. Get multiple of two elements");
+        System.out.println("4. Get divide of two elements");
         System.out.println("0. End program");
     }
 
@@ -55,7 +62,15 @@ public class MainMenu {
             case 1:
                 getSum();
                 break;
-
+            case 2:
+                getDif();
+                break;
+            case 3:
+                getMult();
+                break;
+            case 4:
+                getDivide();
+                break;
             default:
                 System.out.println("Undefined option");
         }
@@ -65,5 +80,17 @@ public class MainMenu {
     
     private void getSum() {
         SumCommand.create().handle();
+    }
+    
+    private void getDif() {
+        MinusCommand.create().handle();
+    }
+    
+    private void getMult() {
+        MultCommand.create().handle();
+    }
+    
+    private void getDivide() {
+        DivideCommand.create().handle();
     }
 }

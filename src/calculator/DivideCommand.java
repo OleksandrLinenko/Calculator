@@ -10,15 +10,15 @@ import UI.Message;
  *
  * @author oleksandrlinenko
  */
-public class SumCommand {
+public class DivideCommand {
 
-    public static SumCommand create() {
-        return new SumCommand();
+    public static DivideCommand create() {
+        return new DivideCommand();
     }
 
     public void handle() {
         Component first = GetComponentCommand.create().handle();
         Component second = GetComponentCommand.create().handle();
-        Message.create().show(String.format("Sum of those components is %.2f\n", SumAction.create().getSum(first, second)));
+        Message.create().show(String.format("Fraction of those components is %.2f\n", DivideAction.create().getDiv(first, second)));
     }
 }
