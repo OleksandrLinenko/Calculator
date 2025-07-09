@@ -12,7 +12,7 @@ import UI.Message;
  * @author oleksandrlinenko
  */
 public class GetComponentCommand {
-     
+
     public static GetComponentCommand create() {
         return new GetComponentCommand();
     }
