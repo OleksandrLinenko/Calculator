@@ -20,5 +20,6 @@ public class SumCommand {
         Component first = GetComponentCommand.create().handle();
         Component second = GetComponentCommand.create().handle();
         Message.create().show(String.format("Sum of those components is %.2f\n", SumAction.create().getSum(first, second)));
+        Message.create().show("\n");
     }
 }

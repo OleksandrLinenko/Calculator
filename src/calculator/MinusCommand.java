@@ -19,5 +19,6 @@ public class MinusCommand {
         Component first = GetComponentCommand.create().handle();
         Component second = GetComponentCommand.create().handle();
         Message.create().show(String.format("Differnce of those components is %.2f\n", MinusAction.create().getDif(first, second)));
+        Message.create().show("\n");
     }
 }
