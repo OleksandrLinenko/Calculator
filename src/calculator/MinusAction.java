@@ -8,13 +8,13 @@ package calculator;
  *
  * @author oleksandrlinenko
  */
-public class SumAction {
+public class MinusAction {
 
-    public static SumAction create() {
-        return new SumAction();
+    public static MinusAction create() {
+        return new MinusAction();
     }
 
-    public float getSum(Component first, Component second) {
-        return first.getValue() + second.getValue();
+    public float getDif(Component first, Component second) {
+        return first.getValue() - second.getValue();
     }
 }

@@ -9,13 +9,13 @@ package calculator;
  * @author oleksandrlinenko
  */
 public class Component {
-    private int value;
+    private float value;
 
-    public Component(int value) {
+    public Component(float value) {
         this.value = value;
     }
 
-    public int getValue() {
+    public float getValue() {
         return value;
     }
    

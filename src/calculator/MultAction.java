@@ -8,13 +8,13 @@ package calculator;
  *
  * @author oleksandrlinenko
  */
-public class SumAction {
+public class MultAction {
 
-    public static SumAction create() {
-        return new SumAction();
+    public static MultAction create() {
+        return new MultAction();
     }
 
-    public float getSum(Component first, Component second) {
-        return first.getValue() + second.getValue();
+    public float getMult(Component first, Component second) {
+        return first.getValue() * second.getValue();
     }
 }
