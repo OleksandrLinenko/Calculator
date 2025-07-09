@@ -4,15 +4,13 @@
  */
 package calculator;
 
-import java.util.Scanner;
+import UI.Message;
 
 /**
  *
  * @author oleksandrlinenko
  */
 public class SumCommand {
-
-    private static Scanner sc = new Scanner(System.in);
 
     public static SumCommand create() {
         return new SumCommand();
@@ -21,6 +19,6 @@ public class SumCommand {
     public void handle() {
         Component first = GetComponentCommand.create().handle();
         Component second = GetComponentCommand.create().handle();
-        System.out.format("Sum of those components is %d\n", SumAction.create().getSum(first, second));
+        Message.create().show(String.format("Sum of those components is %d\n", SumAction.create().getSum(first, second)));
     }
 }

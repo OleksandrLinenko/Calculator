@@ -14,12 +14,12 @@ import java.util.Scanner;
  *
  * @author oleksandrlinenko
  */
-public class UI {
+public class MainMenu {
 
     private static Scanner sc = new Scanner(System.in);
 
-    public static UI create() {
-        return new UI();
+    public static MainMenu create() {
+        return new MainMenu();
     }
 
     public void show() throws IOException {
