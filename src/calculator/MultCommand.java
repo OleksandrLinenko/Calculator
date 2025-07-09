@@ -19,5 +19,6 @@ public class MultCommand {
         Component first = GetComponentCommand.create().handle();
         Component second = GetComponentCommand.create().handle();
         Message.create().show(String.format("Multiple of those components is %.2f\n", MultAction.create().getMult(first, second)));
+        Message.create().show("\n");
     }
 }

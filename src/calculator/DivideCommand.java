@@ -17,8 +17,14 @@ public class DivideCommand {
     }
 
     public void handle() {
-        Component first = GetComponentCommand.create().handle();
-        Component second = GetComponentCommand.create().handle();
-        Message.create().show(String.format("Fraction of those components is %.2f\n", DivideAction.create().getDiv(first, second)));
+        try {
+            Component first = GetComponentCommand.create().handle();
+            Component second = GetComponentCommand.create().handle();
+            Message.create().show(String.format("Fraction of those components is %.2f\n", DivideAction.create().getDiv(first, second)));
+            Message.create().show("\n");
+        } catch (IllegalArgumentException ex) {
+            System.out.println(ex.getMessage());
+            Message.create().show("\n");
+        }
     }
 }
